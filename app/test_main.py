@@ -15,8 +15,8 @@ def test_post_vito():
     response = client.post(
         "/vito",
         json={
-            "linkedInUrl": "http://example.com",
-            "companyUrl": "http://example.com",
+            "linked_in_url": "http://example.com",
+            "company_url": "http://example.com",
         },
     )
     assert response.status_code == 200
