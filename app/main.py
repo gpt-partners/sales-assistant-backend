@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from langchain.create_vito import CreateVito, VitoRequest
+from llm.create_vito import CreateVito, VitoRequest
 
 app = FastAPI()
 client = CreateVito()

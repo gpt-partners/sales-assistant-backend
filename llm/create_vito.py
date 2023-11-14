@@ -1,6 +1,11 @@
 from typing import Annotated
 
+from dotenv import load_dotenv
+from langchain.llms import OpenAI
 from pydantic import BaseModel
+
+load_dotenv()
+llm = OpenAI()
 
 
 class VitoRequest(BaseModel):
@@ -13,4 +18,6 @@ class CreateVito:
         pass
 
     def create_vito(self, vito_request: VitoRequest):
-        return vito_request
+        text = f"Send a message to {vito_request.linked_in_url} to ask for an introduction to {vito_request.company_url}"
+        # return llm.invoke(text)
+        return text
