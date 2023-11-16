@@ -18,6 +18,8 @@ class CreateVito:
         pass
 
     def create_vito(self, vito_request: VitoRequest):
-        text = f"Send a message to {vito_request.linked_in_url} to ask for an introduction to {vito_request.company_url}"
-        # return llm.invoke(text)
-        return text
+        text = (
+            f"Send a message to {vito_request.linked_in_url}"
+            "to ask for an introduction to {vito_request.company_url}"
+        )
+        return llm.invoke(text)
